@@ -57,7 +57,9 @@ If you haven’t already, make two accounts to hold your SPNs:
 
 In PowerShell on DC (or RSAT-enabled client):
 New-ADUser svcWeb  -SamAccountName svcWeb  -AccountPassword (ConvertTo-SecureString 'P@55w0rd!' -AsPlainText -Force) -Enabled $true
-New-ADUser svcSQL  -SamAccountName svcSQL  -AccountPassword (ConvertTo-SecureString 'P@55w0rd!' -AsPlainText -Force) -Enabled $true
+
+
+New-ADUser svcSQL  -SamAccountName svcSQL  -AccountPassword (ConvertTo-SecureString '!TryBr3akMeN0tPoss#bleY' -AsPlainText -Force) -Enabled $true
 
 2. Register two SPNs pointing at those hosts
 Still on the DC, run:
