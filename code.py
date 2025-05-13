@@ -30,7 +30,7 @@ john --show hash2.txt # to see the cracked password
 # In PowerShell on DC (or other server VM):
 
 # Create account with easy to break password
-New-ADUser svcWeb  -SamAccountName svcWeb  -AccountPassword (ConvertTo-SecureString 'P@55w0rd!' -AsPlainText -Force) -Enabled $true
+New-ADUser svcWeb  -SamAccountName svcWeb  -AccountPassword (ConvertTo-SecureString 'iloveyou1' -AsPlainText -Force) -Enabled $true
 
 # Create account with strong password
 New-ADUser svcSQL  -SamAccountName svcSQL  -AccountPassword (ConvertTo-SecureString '!TryBr3akMeN0tPoss#bleY' -AsPlainText -Force) -Enabled $true
