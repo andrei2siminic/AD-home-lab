@@ -1,4 +1,4 @@
-# Lab setup - TODO
+# Lab setup - SOME DETAILS STILL MISSING.
 
 This is the setup of the lab.
 
@@ -7,10 +7,11 @@ VM: Windows Server 2019
 -	AD installed here, default installation
 Important: Host-Only network adapter
 Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
--	works
+
 
 ## S2. Client machine to join AD separately (required for some attacks?)
--	works
+
+VM: Windows 10 Pro image installed
 
 Setting	Value
 IP address	192.168.56.10
@@ -23,13 +24,12 @@ Alternate DNS	(leave blank)
 VM: Kali Linux
 Important: Host-Only network adapter
 Tutorial: any guide from the internet
--	works
+
 
 ## Script to populate AD with users, groups, and vulnerabilities:
 
 1.	Basic: max 100 users
 -	Link: https://github.com/safebuffer/vulnerable-AD/tree/master
--	works
 
 2.	Advanced (BadBlood):
 -	Link: https://github.com/davidprowe/BadBlood 
@@ -46,9 +46,6 @@ bloodhound-python \
   -c Acl \
   -dc DomainC.offensive.local \
   -ns 192.168.56.2
--	works
--	
-
 
 ## Kerberos setup
 
@@ -56,8 +53,7 @@ bloodhound-python \
 If you haven’t already, make two accounts to hold your SPNs:
 
 In PowerShell on DC (or RSAT-enabled client):
-New-ADUser svcWeb  -SamAccountName svcWeb  -AccountPassword (ConvertTo-SecureString 'P@55w0rd!' -AsPlainText -Force) -Enabled $true
-
+New-ADUser svcWeb  -SamAccountName svcWeb  -AccountPassword (ConvertTo-SecureString 'iloveyou1' -AsPlainText -Force) -Enabled $true
 
 New-ADUser svcSQL  -SamAccountName svcSQL  -AccountPassword (ConvertTo-SecureString '!TryBr3akMeN0tPoss#bleY' -AsPlainText -Force) -Enabled $true
 
@@ -69,22 +65,3 @@ setspn -s HTTP/DomainC.offensive.local svcWeb
 
 REM 2) MSSQL service on the DC
 setspn -s MSSQLSvc/DomainC.offensive.local:1433 svcSQL
-
-
-
-
-## Passwords: 
-Ms server: Andrei123
-DSRM password: Codrin123
-Domain name: offensive.local
-Domain controller name: DomainC
-
-Windows Client: name Alice, Alice123
-Offensive.local, Windows account:
-User: merissa.lorrayne
-Pass: Ip]z6tM0e*xC
-
-Security Questions Windows Client: 
-childhood nickname: simi
-first school: loga
-city born: timisoara
