@@ -50,7 +50,7 @@ setspn -s MSSQLSvc/DomainC.offensive.local:1433 svcSQL
 
 # Attack steps:
 
-# Step 0. Attack prerequisite: A user account with their credentials is needed for the attack. We use the franky.lanie account for which we obtained the password after the LLMNR attack.
+# Step 0: Attack prerequisite: A user account with their credentials is needed for the attack. We use the franky.lanie account for which we obtained the password after the LLMNR attack.
 
 # Step 1: Find if any SNPs are available. Install impacket: sudo apt install python3-impacket
 
