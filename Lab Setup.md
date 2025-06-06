@@ -5,14 +5,14 @@ This is the setup of the lab.
 ## S1. Server with AD:
 VM: Windows Server 2019
 -	AD installed here, default installation
-Important: Host-Only network adapter
-Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
+- Important: Host-Only network adapter
+- Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
 
 ## S1 ALTERNATIVE. Server with AD, but the original Windows Server 2019 ISO:
 VM: Windows Server 2019, original 2019 ISO (no updates from later) - needed to exploit some vulnerabilities, which got patched after 2019. 
-In a real setting, it can be expected that not all Server machines are up to date with the latest security patches. We simulate this.
-Important: Host-Only network adapter
-Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
+- In a real setting, it can be expected that not all Server machines are up to date with the latest security patches. We simulate this.
+- Important: Host-Only network adapter
+- Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
 
 ## S2. Client machine to join AD separately (required for some attacks?)
 
