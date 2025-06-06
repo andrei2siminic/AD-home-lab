@@ -8,7 +8,7 @@ VM: Windows Server 2019
 Important: Host-Only network adapter
 Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
 
-## S1 ALTERNATIVE. Server with AD, but the original Windows Server 2019 ISO
+## S1 ALTERNATIVE. Server with AD, but the original Windows Server 2019 ISO:
 VM: Windows Server 2019, original 2019 ISO (no updates from later) - needed to exploit some vulnerabilities, which got patched after 2019. 
 In a real setting, it can be expected that not all Server machines are up to date with the latest security patches. We simulate this.
 Important: Host-Only network adapter
