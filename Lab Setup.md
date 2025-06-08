@@ -1,4 +1,4 @@
-# Active Directory Home Lab setup 
+# Active Directory Home Lab setup for Penetration Testing
 
 This is the setup of the lab.
 
