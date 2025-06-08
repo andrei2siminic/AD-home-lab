@@ -18,17 +18,17 @@ VM: Windows Server 2019, original 2019 ISO (no updates from later) - needed to e
 
 VM: Windows 10 Pro image installed
 
-Setting	Value
-IP address	192.168.56.10
-Subnet mask	255.255.255.0
-Default gateway	(leave blank)
-Preferred DNS	192.168.56.2
-Alternate DNS	(leave blank)
+Setting	Values:
+- IP address	192.168.56.10
+- Subnet mask	255.255.255.0
+- Default gateway	(leave blank)
+- Preferred DNS	192.168.56.2
+- Alternate DNS	(leave blank)
 
 ## S3. Attacker:
-VM: Kali Linux
-Important: Host-Only network adapter
-Tutorial: any guide from the internet
+- VM: Kali Linux
+- Important: Host-Only network adapter
+- Tutorial: any guide from the internet
 
 
 ## Script to populate AD with users, groups, and vulnerabilities:
