@@ -44,7 +44,7 @@ Setting	Values:
 -	find user and password from domain (? For now we cheated this step for testing)
 -	do enumeration
 -	Link: https://m8sec.medium.com/active-directory-acl-abuse-with-kali-linux-7434a27dd938
--command: bloodhound-python \                                        
+- command: bloodhound-python \                                        
   -u merissa.lorrayne \
   -p 'Ip]z6tM0e*xC' \
   -d offensive.local \
