@@ -1,4 +1,4 @@
-# This is the PrintNightmare attack. 
+# This is the PrintNightmare attack. We show two attacks: first, from a Kali Linux machine; and second, from a domain joined Windows client machine.
 
 ############################################################################################################################################################################################################
 # First Attack. CVE-2021-1675 / CVE-2021-34527. Attacking from Kali Linux. For the attack script, we used Cube's script. Link: https://github.com/cube0x0/CVE-2021-1675
