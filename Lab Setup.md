@@ -1,4 +1,4 @@
-# Active Directory Home Lab setup. 
+# Active Directory Home Lab setup 
 
 This is the setup of the lab.
 
