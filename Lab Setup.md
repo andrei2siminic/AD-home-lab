@@ -1,4 +1,4 @@
-# Lab setup - SOME DETAILS STILL MISSING.
+# Active Directory Home Lab setup. 
 
 This is the setup of the lab.
 
@@ -14,7 +14,7 @@ VM: Windows Server 2019, original 2019 ISO (no updates from later) - needed to e
 - Important: Host-Only network adapter
 - Tutorial: https://dev.to/adamkatora/building-an-active-directory-pentesting-home-lab-in-virtualbox-53dc
 
-## S2. Client machine to join AD separately (required for some attacks?)
+## S2. Client machine to join AD separately (required for some attacks)
 
 VM: Windows 10 Pro image installed
 
