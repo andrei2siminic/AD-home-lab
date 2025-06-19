@@ -10,4 +10,5 @@ Project of Andrei Siminic, Codrin Octavian Tanase, Neda Novakova, Paul Marcus.
 Overview of the attacks:
 
 
-![Untitled-2025-06-17-1838](https://github.com/user-attachments/assets/71710258-fe97-4403-a5db-5ecacf5096e6)
+
+![Untitled-2025-06-17-1838](https://github.com/user-attachments/assets/5f984c06-f351-4185-a519-0fadc5985f02)
