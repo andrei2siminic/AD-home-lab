@@ -6,3 +6,8 @@ Final submission. The PDF report is attached to the Canvas submisison, describin
 
 
 Project of Andrei Siminic, Codrin Octavian Tanase, Neda Novakova, Paul Marcus.
+
+Overview of the attacks:
+
+
+![Untitled-2025-06-17-1838](https://github.com/user-attachments/assets/71710258-fe97-4403-a5db-5ecacf5096e6)
