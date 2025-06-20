@@ -11,4 +11,4 @@ Project of Andrei Siminic, Codrin Octavian Tanase, Neda Novakova, Paul Marcus.
 
 
 
-![Untitled-2025-06-17-1838](https://github.com/user-attachments/assets/5f984c06-f351-4185-a519-0fadc5985f02)
+![Untitled-2025-06-17-1838](https://github.com/user-attachments/assets/5f7bedd3-b3c7-4b8c-95e2-004d23569168)
